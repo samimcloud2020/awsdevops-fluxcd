@@ -4,10 +4,14 @@ on:
     paths:
     - "**/*.yml"
     - "**/*.html"
+    - "**/*.yaml"
+    - "*.yaml"
   push:
     paths:
     - "**/*.yml"
     - "**/*.html"
+    - "**/*.yaml"
+    - "*.yaml"
     branches:         # array of glob patterns matching against refs/heads. Optional; defaults to all
     - master          # triggers on pushes that contain changes in master
 
@@ -42,7 +46,7 @@ jobs:
         # Build and tag the image
         docker build \
           -t $CONTAINER_IMAGE \
-          -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE ./php-redis
+          -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE .
  
     # Set image tag in kustomization
 
