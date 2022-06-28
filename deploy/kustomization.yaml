@@ -5,4 +5,4 @@ resources:
 
 images:
 - name: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx
-  newTag: 9660b9986eaa176234572e068bf8ba04a2e22047
+  newTag: e60c2e4b2b7affdcad25223b6879ef37148aeadf
