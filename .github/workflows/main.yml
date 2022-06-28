@@ -50,11 +50,10 @@ jobs:
 
     - name: Set image tag
       run: |
-          cd cluster/eks/flux-system
+          cd deploy
           kustomize edit set image $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE
           cat kustomization.yaml
-          kustomize edit set image $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE
-          cat deployment.yaml
+          
           
     - name: Commit kustomization
       run: |
