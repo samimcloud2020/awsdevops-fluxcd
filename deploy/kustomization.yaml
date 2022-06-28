@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+
+images:
+- name: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx
+  newTag: 9660b9986eaa176234572e068bf8ba04a2e22047
