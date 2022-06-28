@@ -36,8 +36,8 @@ jobs:
     - name: Setup ECR
       run: |
         # Login to AWS ECR
-        $( docker login -u samimbsnl -p Mona1234* )
-        echo $(aws ecr get-authorization-token --region us-east-1 --output text --query 'authorizationData[].authorizationToken' | base64 -d | cut -d: -f2) | docker login -u AWS https://echo $(aws ecr get-authorization-token --region us-east-1 --output text --query 'authorizationData[].authorizationToken' | base64 -d | cut -d: -f2) | docker login -u AWS https://663380234130.dkr.ecr.us-east-1.amazonaws.com  --password-stdin
+        
+        echo $(aws ecr get-authorization-token --region us-east-1 --output text --query 'authorizationData[].authorizationToken' | base64 -d | cut -d: -f2) | docker login -u AWS https://663380234130.dkr.ecr.us-east-1.amazonaws.com --password-stdin
         
     - name: Build and tag the image
       run: |
