@@ -3,3 +3,6 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+images:
+- name: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx
+  newTag: b97ac13d948d3e0e4bf89e735a39654f001518e4
