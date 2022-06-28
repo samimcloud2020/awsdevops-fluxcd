@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy1
+  name: deploy1
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: deploy1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deploy1
+    spec:
+      containers:
+      - image: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx:e60c2e4b2b7affdcad25223b6879ef37148aeadf
+        name: samimbsnl
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: service1
+  name: service1
+spec:
+  ports:
+  - name: 80-5000
+    port: 80
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: deploy1
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+  
