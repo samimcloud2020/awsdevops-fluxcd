@@ -53,7 +53,9 @@ jobs:
           cd cluster/eks/flux-system
           kustomize edit set image $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE
           cat kustomization.yaml
+          kustomize edit set image $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE
           cat deployment.yaml
+          kubectl apply -f deployment.yaml
     - name: Commit kustomization
       run: |
           git config --local user.email "samim1000@gmail.com"
