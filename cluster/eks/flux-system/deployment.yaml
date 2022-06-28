@@ -6,7 +6,7 @@ metadata:
     app: deploy1
   name: deploy1
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: deploy1
@@ -19,7 +19,9 @@ spec:
     spec:
       containers:
       - image: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx:e60c2e4b2b7affdcad25223b6879ef37148aeadf
-        name: samimbsnl
+        name: nginx
+        ports:
+        - containerPort: 80
         resources: {}
 status: {}
 ---
