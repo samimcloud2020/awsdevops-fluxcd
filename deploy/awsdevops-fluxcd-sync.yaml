@@ -5,7 +5,7 @@ metadata:
   name: awsdevops-fluxcd
   namespace: flux-system
 spec:
-  interval: 1h0m0s
+  interval: 2m
   path: ./deploy
   prune: false
   sourceRef:
