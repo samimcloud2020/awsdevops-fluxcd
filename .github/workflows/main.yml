@@ -50,9 +50,9 @@ jobs:
 
     - name: Set image tag
       run: |
-          cd deploy/flux-system
+          cd deploy
           kustomize edit set image $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE
-          cat kustomization.yaml
+          cat awsdevops-fluxcd-sync.yaml
           
           
     - name: Commit kustomization
