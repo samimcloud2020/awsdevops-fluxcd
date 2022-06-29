@@ -1,9 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- gotk-components.yaml
-- gotk-sync.yaml
-- deployment.yaml
-images:
-- name: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx
-  newTag: 5a6f299f69fbb5ca1b483c0c9f1d177651d8ded3
