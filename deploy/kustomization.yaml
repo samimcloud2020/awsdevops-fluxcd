@@ -5,7 +5,7 @@ resources:
 - deployment.yaml
 images:
 - name: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx
-  newTag: 4130aeec7d768a11fe0ba15eced3cf20fc0a2740
+  newTag: 92609d341a08c53a4cacc84fce18743a33e55f43
 - name: deploy1
   newName: deploy1
   newTag: new
