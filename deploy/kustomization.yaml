@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- awsdevops-fluxcd-source.yaml
+- awsdevops-fluxcd-sync.yaml
+- deployment.yaml
+images:
+- name: 663380234130.dkr.ecr.us-east-1.amazonaws.com/nginx
+  newTag: d96b8c340ddf97de366a144871c9d78a03329e51
